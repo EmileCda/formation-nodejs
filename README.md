@@ -1,6 +1,3 @@
 # Formation NodeJs : 27 févier 2023
 
-## Node.js formation Back-end
-
-commit dans vscode
-cd
+## Node.js formation Back-endgit 

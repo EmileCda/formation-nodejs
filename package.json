@@ -1,0 +1,25 @@
+{
+  "name": "formation-nodejs",
+  "version": "1.0.0",
+  "description": "## Node.js formation Back-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compiler:typescript" : "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/EmileCda/formation-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmileCda/formation-nodejs/issues"
+  },
+  "homepage": "https://github.com/EmileCda/formation-nodejs#readme",
+  "devDependencies": {
+    "@types/node": "^18.14.2",
+    "typescript": "^4.9.5"
+  }
+}
