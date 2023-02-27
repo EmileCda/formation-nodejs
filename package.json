@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compiler:typescript" : "tsc --watch"
+    "watch:typescript": "tsc --watch",
+    "demon:node": "nodemon dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/EmileCda/formation-nodejs#readme",
   "devDependencies": {
     "@types/node": "^18.14.2",
+    "nodemon": "^2.0.20",
     "typescript": "^4.9.5"
   }
 }
