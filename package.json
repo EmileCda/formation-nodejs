@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:typescript": "tsc --watch",
-    "demon:node": "nodemon dist/index.js"
+    "watch:typescript": "npx tsc --watch",
+    "watch:app": "npx nodemon dist/index.js",
+    "start": "npx concurrently npm:watch:typescript npm:watch:app"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://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@github.com/EmileCda/formation-nodejs.git"
+    "url": "git+https://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p@github.com/EmileCda/formation-nodejs.git"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/EmileCda/formation-nodejs#readme",
   "devDependencies": {
     "@types/node": "^18.14.2",
+    "concurrently": "^7.6.0",
     "nodemon": "^2.0.20",
     "typescript": "^4.9.5"
   }
