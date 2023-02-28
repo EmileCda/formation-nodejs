@@ -14,7 +14,7 @@ myHttpServer.listen(
   { port: parseInt(process.env.PORT!==undefined ? process.env.PORT : defaultPort, 10), host: process.env.HOST },
   () =>
     console.log(
-      `serveur : ${process.env.HOST}:${process.env.PORT} started and  ready`
+      `server : ${process.env.HOST}:${process.env.PORT} started and  ready`
     )
 );
 
