@@ -167,3 +167,13 @@ exemple
 ```js
 console.long(process.env.MA_VARIABLE_EN);
 ```
+
+Ajouter ce fichier dans .gitignore
+
+```sh
+echo ".env" >> .gitignore
+```
+
+Creer un fichier d'exemple de variable d'environnement
+
+**attention** : le fichier .env ne DOIT pas être versionné. Par contre versionner .env.dist qui est un fichier d'environnement en exemple qui sera versionné.
