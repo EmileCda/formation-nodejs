@@ -1,9 +1,7 @@
-console.log('hello de lu')
-console.log('hello de lu2')
-console.log('Modifcation en direct avec watch')
-console.log('exécution en direct avec nodemons')
-console.log('exécution avec concurretlu *')
 
-
+console.log(`Node NODE_ENV  [${process.env.NODE_ENV}]`);
+console.log(`Node NODE_ENV  [${process.env.TZ}]`);
+console.log(`Node NODE_ENV  [${process.env.HOST}]`);
+console.log(`Node NODE_ENV  [${process.env.PORT}]`);
 
 

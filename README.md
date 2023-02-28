@@ -28,20 +28,16 @@ installation de typescript
 npm i -D typescript @types/node
 ```
 
+Exécution
+
 ```sh
 node ./dist/index.js
 ```
 
-Exécution live
+Compilation live & Exécution live
 
 ```sh
-npm run demon:node
-```
-
-Compilation live
-
-```sh
-npm run watch:typescript
+npm run start
 ```
 
 ## installation lors de la création du projet
@@ -89,7 +85,7 @@ mkdir ./src
 echo "console.log('**********JS on line **************** ')" >> ./src/index.ts
 ```
 
-Check compilation ts : le fichier compilé sera dans le répertoire ./dit
+Check compilation ts : le fichier compilé sera dans le répertoire ./dist
 
 ```sh
 npx tsc ./src/index.ts -outDir ./dist
@@ -146,4 +142,28 @@ A faire dans package.json : clé "scripts"
 
 ```json
 "start": "npx concurrently npm:watch:typescript npm:watch:app"
+```
+
+installation de la gestion des variables d'environnement
+
+```sh
+npm i dotenv
+```
+
+parametrage de dotenv :dans package.json
+
+modifier les scripts d'exécution
+
+```json
+ "watch:app": "npx nodemon -r dotenv/config dist/index.js",
+```
+
+créer le fichier `.env` et y mettre les variables d'environnement
+
+pour utiliser les variables d'environne dans JS
+process.env.MA_VARIABLE_EN
+exemple
+
+```js
+console.long(process.env.MA_VARIABLE_EN);
 ```
