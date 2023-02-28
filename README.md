@@ -19,19 +19,7 @@ Dans une terminal lancer les commandes suivantes :
 initialisation le projet se rendre dans le répertoire projet
 
 ```sh
-npm init -y
-```
-
-installation de typescript
-
-```sh
-npm i -D typescript @types/node
-```
-
-Exécution
-
-```sh
-node ./dist/index.js
+npm i
 ```
 
 Compilation live & Exécution live
@@ -177,3 +165,16 @@ echo ".env" >> .gitignore
 Creer un fichier d'exemple de variable d'environnement
 
 **attention** : le fichier .env ne DOIT pas être versionné. Par contre versionner .env.dist qui est un fichier d'environnement en exemple qui sera versionné.
+
+# codage du serveur http (TP 1)
+
+1. Installer fastify
+2. Dans le fichier `index.ts`, créé une application fastify qui écoute sur votre machine, sur le port 4646
+3. Ajouter 2 routes :
+
+- `GET /`: Qui retourne la chaine de caractère `Bienvenue sur mon serveur`
+- `GET /hello`: Qui retourne la chaine de caractère `Bonjour tout le monde`
+
+4. Utiliser des variables d'environement pour le `port` et le `host` de votre serveur ...
+
+> L'objéctif de l'exercice 4 est de rendre configurable pour `Alban` le `host` et le `port` de notre serveur !
