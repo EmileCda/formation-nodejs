@@ -216,9 +216,9 @@ app.get("/vetements:id",(request)=>{traitement..})
 ajouter un code 400 pour le cas des division par erreur
 utilisation des parametres : header, body et params
 
-# codage des (TP4) : ajouter les plugin
+# codage du (TP5) : ajouter les plugin
 
-[cours ]()
+[cours ](https://github.com/Djeg/formation-nodejs-mongo/blob/session/27-02-23/03-03-23/assets/cours/fastify.md)
 [consigne](https://github.com/Djeg/formation-nodejs-mongo/blob/session/27-02-23/03-03-23/assets/exos/first-server.md#le-plugin-calulcatrice)
 
 ```sh

@@ -74,19 +74,20 @@ myApp.get<CalculateRoute>("/calc/div/:x/:y", (request, response) => {
 
 type TOperation = "add" | "sub" | "mul" | "div";
 
-type calcHeader = {
-  headers: {
-    operation: string;
-  };
-  body: {
-    x: number;
-    y: number;
-  };
+type CalcRoute = {
+  Headers: {
+    operation: string
+  }
+    Body: {
+    x: number,
+    y: number
+  }
 };
 
+    
 // Route for division calculation usfing params as parametre
-myApp.post<calcHeader>("/calculate", (request ,response) => {
-  const operation:TOperation = request.headers.operation;
+myApp.post<CalcRoute>("/calculate", (request ,response) => {
+  const operation = request.headers.operation;
   const x = request.body.x;
   const y = request.body.y;
 

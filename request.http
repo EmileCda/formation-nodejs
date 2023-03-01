@@ -39,10 +39,41 @@ Content-Type: application/json
 
 ###
 POST http://127.0.0.1:4646/calculate
-Operation:divz
+Operation:divz  
 Content-Type: application/json
 
 {
   "x": 15,
   "y": 0
 }
+
+
+
+###request using resource with header as a parameter
+### header param are just under the GET instruction
+GET http://127.0.0.1:4646/headers 
+Operation:divzazazaaaa
+
+
+###request using resource with header as a parameter
+### header param are just under the GET instruction
+GET http://127.0.0.1:4646/param/titit/22 
+
+
+###request using resource with header as a parameter
+### body must be declare by using conten-type
+### body must have one line void under content-type
+POST http://127.0.0.1:4646/body
+Operation:divz  
+Content-Type: application/json
+
+{
+  "x": 15,
+  "y": 0
+}
+
+
+###request to test code returning in header 
+### do not haveany parameter
+GET http://127.0.0.1:4646/returnCode
+

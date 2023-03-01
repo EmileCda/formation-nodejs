@@ -7,10 +7,12 @@
 import fastify from "fastify";
 import fastifyPlugin from "fastify-plugin";
 import CalculatorRoute from "./route/calculatrice";
+import DummyRoute from "./route/dummy";
 
 const myApp = fastify();
 
 myApp.register(fastifyPlugin(CalculatorRoute));
+myApp.register(fastifyPlugin(DummyRoute));
 
 // if environment var do not exist raise and error.
 const myPort = parseInt(
