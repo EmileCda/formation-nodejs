@@ -27,19 +27,11 @@ GET http://127.0.0.1:4646/calc/add/3/5
 
 
 ###
-POST  http://127.0.0.1:4646/calculate
-
-###
-POST http://127.0.0.1:4646/calculate {"header":{"operation" :"add"},{"body" :{"x":3}, {"y":5}}}
-
-
-
-###
 POST http://127.0.0.1:4646/calculate
-Operation:sub
+Operation:div
 Content-Type: application/json
 
 {
   "x": 15,
-  "y": 26
+  "y": 0
 }
