@@ -6,8 +6,8 @@
 import fastify from "fastify";
 
 const myHttpServer = fastify();
-// if environment var do not exist back to defaul port .
 
+// if environment var do not exist raise and error.
 const myPort =  parseInt(process.env.PORT===undefined ?"Port Missing" :process.env.PORT,10)
 const myHost = process.env.HOST 
 // port is waiting for a number 
@@ -24,12 +24,12 @@ myHttpServer.listen(
 // Add 2 resources for this server
 // what to return when asking for root 
 myHttpServer.get("/", () => {
-  return `Bienvenue sur mon serveur`;
+  return `Bienvenue sur mon serveur:  Home page`;
 });
 
 // what to return when asking for hello resource
 myHttpServer.get("/hello", () => {
-  return `Bonjour tout le monde`;
+  return `Bonjour tout le monde : Hello page`;
 });
 
 

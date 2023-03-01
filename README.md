@@ -178,3 +178,7 @@ Creer un fichier d'exemple de variable d'environnement
 4. Utiliser des variables d'environement pour le `port` et le `host` de votre serveur ...
 
 > L'objéctif de l'exercice 4 est de rendre configurable pour `Alban` le `host` et le `port` de notre serveur !
+
+# codage des (TP2)
+
+[sujet](https://github.com/Djeg/formation-nodejs-mongo/blob/session/27-02-23/03-03-23/assets/exos/first-server.md)
