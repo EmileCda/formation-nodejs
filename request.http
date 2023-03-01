@@ -35,3 +35,14 @@ Content-Type: application/json
   "x": 15,
   "y": 0
 }
+
+
+###
+POST http://127.0.0.1:4646/calculate
+Operation:divz
+Content-Type: application/json
+
+{
+  "x": 15,
+  "y": 0
+}
