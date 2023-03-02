@@ -17,9 +17,12 @@ myApp.register(fastifyPlugin(CalculatorRoute));
 myApp.register(fastifyPlugin(DummyRoute));
 myApp.register(fastifyPlugin(UtilsRoute));
 
+console.log(process.env.MONGODB_URL)
+console.log(process.env.DATABASE)
+
 myApp.register(fastifyMongodb, {
-  url: 'mongodb+srv://emilecda:i6nhKDAkYoeZPWGW@cluster0.y8snihr.mongodb.net/?retryWrites=true&w=majority',
-  database: 'Newton'
+  url: process.env.MONGODB_URL,
+  database: process.env.DATABASE
 })
 // myApp.mongo.db
 

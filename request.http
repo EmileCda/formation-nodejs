@@ -78,3 +78,8 @@ Content-Type: application/json
 ### do not have any parameter
 GET http://127.0.0.1:5555/returnCode
 
+
+
+### request to select the whole catalogue (calculatrices)
+GET http://127.0.0.1:5555/calculatrices
+
