@@ -1,33 +1,33 @@
 
 ###
-GET http://127.0.0.1:4646
+GET http://127.0.0.1:5555
 
 ###
-GET http://127.0.0.1:4646/hello
+GET http://127.0.0.1:5555/hello
 
 ###
-GET http://127.0.0.1:4646/eleves
+GET http://127.0.0.1:5555/eleves
 
 ###
-GET http://127.0.0.1:4646/calc/add/3/5
+GET http://127.0.0.1:5555/calc/add/3/5
 
 ###
-GET http://127.0.0.1:4646/calc/sub/3/54
+GET http://127.0.0.1:5555/calc/sub/3/54
 
 ###
-GET http://127.0.0.1:4646/calc/mul/43/5
+GET http://127.0.0.1:5555/calc/mul/43/5
 
 ###
-GET http://127.0.0.1:4646/calc/div/3/0
+GET http://127.0.0.1:5555/calc/div/3/0
 
-
-
-###
-GET http://127.0.0.1:4646/calc/add/3/5
 
 
 ###
-POST http://127.0.0.1:4646/calculate
+GET http://127.0.0.1:5555/calc/add/3/5
+
+
+###
+POST http://127.0.0.1:5555/calculate
 Operation:div
 Content-Type: application/json
 
@@ -38,7 +38,7 @@ Content-Type: application/json
 
 
 ###
-POST http://127.0.0.1:4646/calculate
+POST http://127.0.0.1:5555/calculate
 Operation:divz  
 Content-Type: application/json
 
@@ -51,29 +51,30 @@ Content-Type: application/json
 
 ###request using resource with header as a parameter
 ### header param are just under the GET instruction
-GET http://127.0.0.1:4646/headers 
-Operation:divzazazaaaa
+### key for header is not case sensive (Operation or OpErAtIoN is the same 
+GET http://127.0.0.1:5555/header
+OpErAtIoN:mon OpErAtIoN toto
 
 
 ###request using resource with header as a parameter
 ### header param are just under the GET instruction
-GET http://127.0.0.1:4646/param/titit/22 
+GET http://127.0.0.1:5555/param/titit/22 
 
 
 ###request using resource with header as a parameter
 ### body must be declare by using conten-type
 ### body must have one line void under content-type
-POST http://127.0.0.1:4646/body
-Operation:divz  
+POST http://127.0.0.1:5555/body
+OPERATIONsq:dlcdd
 Content-Type: application/json
 
 {
   "x": 15,
-  "y": 0
+  "y": 0,
 }
 
 
 ###request to test code returning in header 
-### do not haveany parameter
-GET http://127.0.0.1:4646/returnCode
+### do not have any parameter
+GET http://127.0.0.1:5555/returnCode
 
