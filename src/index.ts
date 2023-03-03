@@ -14,7 +14,10 @@ import UtilsRoute from "./route/utils";
 
 const myApp = fastify();
 
+// plugin for calculator
 myApp.register(fastifyPlugin(CalculatorRoute));
+
+// plugging sandbox for testing 
 myApp.register(fastifyPlugin(DummyRoute));
 myApp.register(fastifyPlugin(UtilsRoute));
 myApp.register(fastifyPlugin(PizzaRoute));
