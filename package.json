@@ -7,11 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:typescript": "npx tsc --watch",
     "watch:app": "npx nodemon -r dotenv/config dist/index.js",
-    "start": "npx concurrently npm:watch:typescript npm:watch:app"
+    "start": "npx concurrently npm:watch:typescript npm:watch:app",
+    "package.json.dist": "think about package.json.dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://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p@github.com/EmileCda/formation-nodejs.git"
+    "url": "git+https://github.com/EmileCda/formation-nodejs.git"
   },
   "keywords": [],
   "author": "",
