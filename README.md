@@ -19,19 +19,7 @@ Dans une terminal lancer les commandes suivantes :
 initialisation le projet se rendre dans le répertoire projet
 
 ```sh
-npm init -y
-```
-
-installation de typescript
-
-```sh
-npm i -D typescript @types/node
-```
-
-Exécution
-
-```sh
-node ./dist/index.js
+npm i
 ```
 
 Compilation live & Exécution live
@@ -177,3 +165,64 @@ echo ".env" >> .gitignore
 Creer un fichier d'exemple de variable d'environnement
 
 **attention** : le fichier .env ne DOIT pas être versionné. Par contre versionner .env.dist qui est un fichier d'environnement en exemple qui sera versionné.
+
+# codage du serveur http (TP 1)
+
+1. Installer fastify
+2. Dans le fichier `index.ts`, créé une application fastify qui écoute sur votre machine, sur le port 4646
+3. Ajouter 2 routes :
+
+- `GET /`: Qui retourne la chaine de caractère `Bienvenue sur mon serveur`
+- `GET /hello`: Qui retourne la chaine de caractère `Bonjour tout le monde`
+
+4. Utiliser des variables d'environement pour le `port` et le `host` de votre serveur ...
+
+> L'objéctif de l'exercice 4 est de rendre configurable pour `Alban` le `host` et le `port` de notre serveur !
+
+# codage des (TP2) : Tester votre server
+
+1. Créer une fichier `request.http` à la racine de votre projet afin de pouvoir tester notre server
+2. Dans ce fichier écrivez une request en méthode GET sur la page d'acceuil de notre server
+3. Toujours dans ce fichier, écrivez une seconde requête pour la resource `/hello` sur notre serveur
+4. Envoyé chacune des requêtes assurez-vous que tout fonctionne
+5. Commit sur gitub et de partager le lien github
+
+# codage des (TP3) : route /eleves : retour un tableau d'elève au format json
+
+[consigne ](https://github.com/Djeg/formation-nodejs-mongo/blob/session/27-02-23/03-03-23/assets/exos/first-server.md)
+
+transmission de donnée du client au server
+
+plusieurs méthode pour passer des parametres : chaque méthode correspond à un besoin.
+
+1. header
+2. body
+3. querry strinf
+4. route dynamique => Sur la route on y ajoute un parametre (id)
+
+export type vetementRoute ={
+params
+}
+
+```html
+app.get("/vetements:id",(request)=>{traitement..})
+```
+
+# codage des (TP4) : calculatrice via les routes
+
+[cours](https://github.com/Djeg/formation-nodejs-mongo/blob/session/27-02-23/03-03-23/assets/cours/fastify.md)
+[consigne](https://github.com/Djeg/formation-nodejs-mongo/blob/session/27-02-23/03-03-23/assets/exos/first-server.md#la-calculatrice-)
+
+ajouter un code 400 pour le cas des division par erreur
+utilisation des parametres : header, body et params
+
+# codage du (TP5) : ajouter les plugin
+
+[cours ](https://github.com/Djeg/formation-nodejs-mongo/blob/session/27-02-23/03-03-23/assets/cours/fastify.md)
+[consigne](https://github.com/Djeg/formation-nodejs-mongo/blob/session/27-02-23/03-03-23/assets/exos/first-server.md#le-plugin-calulcatrice)
+
+```sh
+npm i fastify-plugin
+mkdir ./src/route
+
+```
