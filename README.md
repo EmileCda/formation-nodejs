@@ -226,3 +226,40 @@ npm i fastify-plugin
 mkdir ./src/route
 
 ```
+
+# codage du (TP6) : ajouter mongo db
+
+installation de @fastify/mongodb
+
+```sh
+npm i @fastifu/mongodb
+```
+
+attention : passer toutes les routes en `async`
+
+dans index.js :
+
+```js
+app.register (fastifuyMongodb, <url de connexion à la base de donnée>) en remplacant le mot de passe,
+databse: <nomDataBase>)
+```
+
+l'url est celui donné par mongoDB atlas
+
+insert into mogodb
+
+```js
+   const result = await myApp.mongo.db?.collection(<collection-name>).insertOne(<json-value-inserted>)
+```
+
+retreive all data from mogodb collection
+
+```js
+ const result = await myApp.mongo.db?.collection(<cpollection-name>).find({}).toArray();
+```
+
+or retreive data whit crieria from mogodb collection
+
+```js
+ const result = await myApp.mongo.db?.collection(<cpollection-name>).find({_id:{myId}}).toArray();
+```
