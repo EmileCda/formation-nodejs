@@ -9,6 +9,7 @@ import fastify from "fastify";
 import fastifyPlugin from "fastify-plugin";
 import CalculatorRoute from "./route/calculatrice";
 import DummyRoute from "./route/dummy";
+import PizzaRoute from "./route/pizzeria";
 import UtilsRoute from "./route/utils";
 
 const myApp = fastify();
@@ -16,9 +17,9 @@ const myApp = fastify();
 myApp.register(fastifyPlugin(CalculatorRoute));
 myApp.register(fastifyPlugin(DummyRoute));
 myApp.register(fastifyPlugin(UtilsRoute));
+myApp.register(fastifyPlugin(PizzaRoute));
 
-console.log(process.env.MONGODB_URL)
-console.log(process.env.DATABASE)
+
 
 myApp.register(fastifyMongodb, {
   url: process.env.MONGODB_URL,
