@@ -89,8 +89,8 @@ editer le fichier `./tsconfig.json` et renseigner les clés :
 Exclure les répertoires et fichier à versionner
 
 ```sh
-echo "dist/" >> .gitignore
-echo "node_modules/" >> .gitignore
+echo "dist" >> .gitignore
+echo "node_modules" >> .gitignore
 echo "package-lock.json" >> .gitignore
 ```
 
@@ -263,4 +263,58 @@ or retreive data whit crieria from mogodb collection
 
 ```js
  const result = await myApp.mongo.db?.collection(<cpollection-name>).find({_id:{myId}}).toArray();
+```
+
+codage tp7 CRUD (create read update delete)
+
+[consigne](https://github.com/Djeg/formation-nodejs-mongo/blob/session/27-02-23/03-03-23/assets/exos/mongodb.md#la-pizzeria)
+
+create
+
+```js
+const result = await myApp.mongo.db
+  ?.collection(pizzaCollection)
+  .insertOne(newPizza);
+```
+
+read
+
+```js
+const myPizza = await myApp.mongo.db
+  ?.collection(pizzaCollection)
+  .findOne({ _id: myId });
+```
+
+read formaté par page
+
+```js
+const result = await myApp.mongo.db
+  ?.collection("pizzas")
+  .find(nameSearch ? { name: new RegExp(nameSearch, "i") } : {})
+  .limit(myLimit)
+  .skip(myOffset)
+  .toArray();
+```
+
+update
+
+```js
+    const updatePizza = { ...request.body }; // in order to keep the same type const updatePizza = request.body is no good;
+
+ const result = await myApp.mongo.db?.collection(pizzaCollection).updateOne(
+      {
+        _id: new ObjectId(request.params.id),
+      },
+      {
+        $set: updatePizza,
+      }
+
+```
+
+delete
+
+```js
+const result = await myApp.mongo.db
+  ?.collection("pizzas")
+  .deleteOne({ _id: id });
 ```
