@@ -12,7 +12,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EmileCda/formation-nodejs.git"
+
+    "url": "git+https://<token>@github.com/EmileCda/formation-nodejs.git"
   },
   "keywords": [],
   "author": "",
