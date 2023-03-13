@@ -1,0 +1,109 @@
+
+### post a new pizza 
+POST http://127.0.0.1:5555/pizzas
+Content-Type: application/json
+
+{
+    "name": "e fichi",
+    "price": 11.2,
+    "description": "pizza e fichi description",
+    "image": "https://cdn.pixabay.com/photo/2017/09/30/15/10/plate-2802332__340.jpg"
+ }
+
+### nexte res
+POST http://127.0.0.1:5555/pizzas
+Content-Type: application/json
+
+ {
+    "name": "casalinga",
+    "price": 11.2,
+    "description": "pizza casalinga description",
+    "image": "https://cdn.pixabay.com/photo/2016/11/29/13/02/cheese-1869708__340.jpg"
+ }
+
+### nexte res
+POST http://127.0.0.1:5555/pizzas
+Content-Type: application/json
+
+ {
+    "name": "quattro stagioni",
+    "price": 11.2,
+    "description": "pizza quattro stagioni description",
+    "image": "https://cdn.pixabay.com/photo/2014/05/18/11/25/pizza-346985__340.jpg"
+ }
+### nexte res
+POST http://127.0.0.1:5555/pizzas
+Content-Type: application/json
+
+ {
+    "name": "pugliese",
+    "price": 11.2,
+    "description": "pizza pugliese description",
+    "image": "https://cdn.pixabay.com/photo/2017/08/06/06/43/pizza-2589575__340.jpg"
+ }
+### nexte res
+POST http://127.0.0.1:5555/pizzas
+Content-Type: application/json
+
+ {
+    "name": "Pizzetta",
+    "price": 11.2,
+    "description": "pizza Pizzetta description",
+    "image": "https://cdn.pixabay.com/photo/2020/06/08/16/49/pizza-5275191__340.jpg"
+ }
+### nexte res
+POST http://127.0.0.1:5555/pizzas
+Content-Type: application/json
+
+ {
+    "name": "Sicilian",
+    "price": 11.2,
+    "description": "pizza Sicilian description",
+    "image": "https://cdn.pixabay.com/photo/2021/07/19/16/04/pizza-6478478__340.jpg"
+ }
+
+### nexte res
+POST http://127.0.0.1:5555/pizzas
+Content-Type: application/json
+
+ {
+    "name": "Pepperoni",
+    "price": 11.2,
+    "description": "pizza Pepperoni description",
+    "image": "https://cdn.pixabay.com/photo/2016/03/05/21/45/pizza-1239077__340.jpg"
+ }
+### nexte res
+POST http://127.0.0.1:5555/pizzas
+Content-Type: application/json
+
+ {
+    "name": "Napolitain",
+    "price": 11.2,
+    "description": "pizza Napolitain description",
+    "image": "https://cdn.pixabay.com/photo/2016/02/16/07/39/pizza-1202775__340.jpg"
+ }
+
+
+###
+DELETE http://127.0.0.1:5555/pizzas/6401e86904953cbd07122e94
+
+### request for modifing  a pizza
+Patch http://127.0.0.1:5555/pizzas/6401e94702528eb0be864a0a
+Content-Type: application/json
+
+{
+    "name": "Napolitain.2.0"
+}
+
+
+
+### retrreive all pizza in an array
+GET  http://127.0.0.1:5555/pizzas?limit=3
+
+
+### retrreive all pizza in an array
+GET  http://127.0.0.1:5555/pizzas?name=Roman
+
+
+
+

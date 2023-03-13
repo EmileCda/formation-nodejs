@@ -34,7 +34,7 @@ export default async function UtilsRoute(myApp: FastifyInstance) {
 // this route return all record from collection calculatrice
  
   myApp.get("/calculatrices", async () => {
-    const result = await myApp.mongo.db?.collection('calculatrices').find({}).toArray();
-    return result;
+    const collection = await myApp.mongo.db?.collection('calculatrices').find({}).toArray();
+    return collection;
   });
 }

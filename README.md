@@ -89,8 +89,8 @@ editer le fichier `./tsconfig.json` et renseigner les clés :
 Exclure les répertoires et fichier à versionner
 
 ```sh
-echo "dist/" >> .gitignore
-echo "node_modules/" >> .gitignore
+echo "dist" >> .gitignore
+echo "node_modules" >> .gitignore
 echo "package-lock.json" >> .gitignore
 ```
 
@@ -225,4 +225,96 @@ utilisation des parametres : header, body et params
 npm i fastify-plugin
 mkdir ./src/route
 
+```
+
+# codage du (TP6) : ajouter mongo db
+
+installation de @fastify/mongodb
+
+```sh
+npm i @fastifu/mongodb
+```
+
+attention : passer toutes les routes en `async`
+
+dans index.js :
+
+```js
+app.register (fastifuyMongodb, <url de connexion à la base de donnée>) en remplacant le mot de passe,
+databse: <nomDataBase>)
+```
+
+l'url est celui donné par mongoDB atlas
+[mongodb](https://cloud.mongodb.com/)
+
+insert into mogodb
+
+```js
+   const result = await myApp.mongo.db?.collection(<collection-name>).insertOne(<json-value-inserted>)
+```
+
+retreive all data from mogodb collection
+
+```js
+ const result = await myApp.mongo.db?.collection(<cpollection-name>).find({}).toArray();
+```
+
+or retreive data whit crieria from mogodb collection
+
+```js
+ const result = await myApp.mongo.db?.collection(<cpollection-name>).find({_id:{myId}}).toArray();
+```
+
+codage tp7 CRUD (create read update delete)
+
+[consigne](https://github.com/Djeg/formation-nodejs-mongo/blob/session/27-02-23/03-03-23/assets/exos/mongodb.md#la-pizzeria)
+
+create
+
+```js
+const result = await myApp.mongo.db
+  ?.collection(pizzaCollection)
+  .insertOne(newPizza);
+```
+
+read
+
+```js
+const myPizza = await myApp.mongo.db
+  ?.collection(pizzaCollection)
+  .findOne({ _id: myId });
+```
+
+read formaté par page
+
+```js
+const result = await myApp.mongo.db
+  ?.collection("pizzas")
+  .find(nameSearch ? { name: new RegExp(nameSearch, "i") } : {})
+  .limit(myLimit)
+  .skip(myOffset)
+  .toArray();
+```
+
+update
+
+```js
+    const updatePizza = { ...request.body }; // in order to keep the same type const updatePizza = request.body is no good;
+
+ const result = await myApp.mongo.db?.collection(pizzaCollection).updateOne(
+      {
+        _id: new ObjectId(request.params.id),
+      },
+      {
+        $set: updatePizza,
+      }
+
+```
+
+delete
+
+```js
+const result = await myApp.mongo.db
+  ?.collection("pizzas")
+  .deleteOne({ _id: id });
 ```
